@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 20px;
+    background-color:#fff5cb;
+    font-size: 1rem;
+  }
+ 
+   .navbarContainer, .carritoContainer {
+    width: 300px;
+  }
+  
+   .navbarContainer ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+   }
+  
+   .navbarContainer ul li a{
+    text-decoration: none;
+   }
+  
+ 
+   .navbarContainer ul li:hover {
+    transform: scale(2);
+    
+   }
+  
+   .carritoContainer {
+    text-align: right;
+    font-size: 2rem;
+    transition: transform 0.3 ease;
+   }
+  
+   .carritoContainer a i:hover {
+    transition: scale(1.1);
+    transform: rotate(0.1turn);
+   }
