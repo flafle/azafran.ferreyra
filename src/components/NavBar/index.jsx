@@ -1,9 +1,13 @@
 import React from "react";
+import CartWidget from "../../containers/ItemListContainer/CartWidget";
 import "./styles.css";
 
-const NavBar = () => {
-    return (
+
+const NavBar = (propiedades) =>  {
   
+  console.log (propiedades);
+  return (
+   
 <header className="header">
     
 <div className="logoAzafran">
@@ -16,11 +20,11 @@ const NavBar = () => {
     <li><a href="/#">Productos</a></li>
     <li><a href="/#">Contacto</a></li>
   </ul>
+
 </nav>
-<div className="carritoContainer">
-  <a href=" "><i class="fa-solid fa-cart-shopping"></i></a>
-</div>
+<CartWidget/>
 </header>
+
   )
 };
 

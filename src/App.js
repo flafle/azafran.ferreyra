@@ -1,20 +1,25 @@
 import "./app.css";
 import NavBar from "./components/NavBar";
+import Ad from "./components/NavBar/Ad";
+import ItemListContainer from "./containers/ItemListContainer";
+
 
 function App() {
+  
+  const categorias = ["Anillados", "Tapas", "Cartucheras", "Encuadernacion"]
+  
   return (
     <>
-    <NavBar/>
-    <div className="App">
-      <p style = {
-        {
-          color:"red",
-        }
-  
-      }>
-      ¡Bienvenid@s a Azafrán!</p>
-    
-    </div>
+    <NavBar categories = {categorias} />
+   
+   
+    <ItemListContainer gretting = {"Bienvenid@s a Azafrán"} />
+   
+   
+    <Ad>
+      <h1>"Bienvenid@s a Azafrán"</h1>
+    </Ad>
+    <p>"Mira todos nuestros productos"</p>
     </>
   );
 }
