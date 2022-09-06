@@ -2,11 +2,12 @@ import "./app.css";
 import NavBar from "./components/NavBar";
 import Ad from "./components/NavBar/Ad";
 import ItemListContainer from "./containers/ItemListContainer";
+import itemCount from "../src/components/ItemCount";
 
 
 function App() {
   
-  const categorias = ["Anillados", "Tapas", "Cartucheras", "Encuadernacion"]
+  const categorias = ["Modelos","Hojas", "Tapas", "Cartucheras", "Encuadernacion"]
   
   return (
     <>
@@ -23,5 +24,5 @@ function App() {
     </>
   );
 }
-
+<itemCount/>
 export default App;

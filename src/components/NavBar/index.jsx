@@ -1,31 +1,42 @@
 import React from "react";
-import CartWidget from "../../containers/ItemListContainer/CartWidget";
 import "./styles.css";
+import CartWidget from "../CartWidget";
+import Select from "../Select";
+import { useState } from "react";
 
 
-const NavBar = (propiedades) =>  {
-  
-  console.log (propiedades);
+const NavBar = () =>  {
+
+  const [navColor, setNavColor] = useState("#f9ada0")
+
+ const onChangeColor = (event) => {
+  const color = event.target.value;
+  setNavColor(color)
+
+ }
+  console.log(navColor) ;
+
   return (
-   
-<header className="header">
-    
-<div className="logoAzafran">
-  <p>Logoazafran</p>
-</div>
+    <ul style={{
+      backgroundColor : navColor
+    }}>
+      <li>
+        <a href="/#">Inicio</a>
+      </li>
+      <li>
+        <a href="/#">Menú</a>
+      </li>
+      <li>
+        <a href="/#">Contacto</a>
+      </li>
+      <li>
+        <a href="/#">Acerca de Azafrán</a>
+      </li>
 
-<nav className="navbarContainer">
-  <ul>
-    <li><a href="/#">Inicio</a></li>
-    <li><a href="/#">Productos</a></li>
-    <li><a href="/#">Contacto</a></li>
+      <CartWidget/>
+      <Select handleColor={onChangeColor}/>
   </ul>
-
-</nav>
-<CartWidget/>
-</header>
-
-  )
-};
-
+  );
+  };
+  
 export default NavBar;
