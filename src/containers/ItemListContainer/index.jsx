@@ -1,20 +1,22 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import ItemCount from "../../components/ItemCount";
 import ItemList from "../../components/ItemList";
 import "../ItemListContainer/styles.css";
 
-const ItemListContainer = ({greeting}) => {
-  const [productos, setProductos] = useState([])
+const ItemListContainer = ({greeting}) => { 
+  
+  const [products, setProductos] = useState([])
 
   useEffect(() => {
-(async()=> {
-  const obtenerProductos = new Promise ((aceptar, cancelar)=> {
+( async ()=> {
+
+  const obtenerProductos = new Promise ((resolve, reject)=> {
     setTimeout(()=> {
-      aceptar(productos)
+      resolve(products)
     }, 3000);
-  })
+  });
+
   try {
     const productos = await obtenerProductos;
     setProductos(productos);
@@ -23,16 +25,17 @@ const ItemListContainer = ({greeting}) => {
   }
 
 })()
-}, [])
-  console.log(productos)
+}, [products])
+
+  console.log(products)
 
     return (
       <div className="item-list-container">
-        <ItemList productos = {productos}/>
+        <ItemList productos = {products}/>
       </div>
     )
   };
-  <ItemCount/>
+
  
 
 export default ItemListContainer;

@@ -7,13 +7,11 @@ import itemCount from "../src/components/ItemCount";
 
 function App() {
   
-  const categorias = ["Modelos","Hojas", "Tapas", "Cartucheras", "Encuadernacion"]
+  // const categorias = ["Modelos","Hojas", "Tapas", "Cartucheras", "Encuadernacion"]
   
   return (
     <>
-    <NavBar categories = {categorias} />
-   
-   
+    <NavBar/>
     <ItemListContainer gretting = {"Bienvenid@s a Azafrán"} />
    
    

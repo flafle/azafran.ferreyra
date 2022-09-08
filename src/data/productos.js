@@ -1,3 +1,5 @@
+//Un array de JS.
+// puede estar en formato JASON pero en la carpeta public.( o sea lo tenes que transformar en un objeto valido despues.)
 export const products = [
     { id: 1, description: "Descripción 1", name: "Floral", stock: 5 },
     { id: 2, description: "Descripción 2", name: "Ciudad", stock: 3 },
