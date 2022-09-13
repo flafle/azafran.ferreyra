@@ -1,10 +1,16 @@
 import React from "react";
-import ItemCount from "../ItemCount";
 
+
+//corresponde a la card del prodcucto agregar css
 
 const Item = ({productos}) => {
     return (
-        <h1>{productos.name} </h1>
+       <div>
+        <img src={productos.image} width={250} alt="productos" />
+
+        <h1>{productos.title} </h1>
+
+      </div>
     )
 };
 

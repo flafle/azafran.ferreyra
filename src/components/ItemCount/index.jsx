@@ -1,5 +1,6 @@
 import React from 'react';
-import { useState } from 'react'; 
+import { useState, useEffect } from 'react'; 
+import "./styles.css"
 
 
 const ItemCount = ({stock, initial, onAdd}) => {
@@ -23,7 +24,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
   }
 
   const addCart = () => {
-    onAdd(add);
+    onAdd(count);
     setAdd(initial)
   }
 

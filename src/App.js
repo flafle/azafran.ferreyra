@@ -1,26 +1,37 @@
 import "./app.css";
 import NavBar from "./components/NavBar";
-import Ad from "./components/NavBar/Ad";
+import ItemDetailContainer from "./containers/ItemDetailContainer";
 import ItemListContainer from "./containers/ItemListContainer";
-import itemCount from "../src/components/ItemCount";
-
+import Cart from './containers/CartContainer';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import NotFound from "./components/NotFound";
 
 function App() {
   
-  // const categorias = ["Modelos","Hojas", "Tapas", "Cartucheras", "Encuadernacion"]
+  // const categorias = ["Anillado","Hojas", "Tapas", "Cartucheras", "Encuadernacion"]
   
   return (
-    <>
+   <BrowserRouter>
+
     <NavBar/>
-    <ItemListContainer gretting = {"Bienvenid@s a Azafrán"} />
-   
-   
-    <Ad>
-      <h1>"Bienvenid@s a Azafrán"</h1>
-    </Ad>
-    <p>"Mira todos nuestros productos"</p>
-    </>
+  
+   <Routes>
+ 
+    <Route path="/" element={<ItemListContainer/>} />
+    <Route path= "/category/:categoryId" element={<ItemlistContainer/>} /> 
+    <Route path="/detail/:productId" element={<ItemDetailContainer/>} />
+    <Route path="/cart" element={<Cart/>}/>
+    <Route path="*" element= {<NotFound/>} />
+
+   </Routes>
+   </BrowserRouter>
   );
-}
+};
+
 <itemCount/>
+
 export default App;

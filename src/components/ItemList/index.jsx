@@ -1,5 +1,6 @@
 import React from "react";
 import Item from "../Item";
+import Modal from "../Modal"
 
 
 const ItemList = ({productos}) => {
@@ -11,5 +12,7 @@ const ItemList = ({productos}) => {
         </div>
     );
 };
+{ModalShow ? <Modal handleClose={SetModalShow} />: null }
+
 
 export default ItemList;

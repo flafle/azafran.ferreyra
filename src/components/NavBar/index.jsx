@@ -3,7 +3,7 @@ import "./styles.css";
 import CartWidget from "../CartWidget";
 import Select from "../Select";
 import { useState } from "react";
-
+import {Link} from "react-router-dom";
 
 const NavBar = () =>  {
 
@@ -21,16 +21,19 @@ const NavBar = () =>  {
       backgroundColor : navColor
     }}>
       <li>
-        <a href="/#">Inicio</a>
+        <Link to="">Inicio</Link>
       </li>
       <li>
-        <a href="/#">Menú</a>
+        <Link to="/category/tapas">Men's clothing</Link>
       </li>
       <li>
-        <a href="/#">Contacto</a>
+        <Link to="">Hojas</Link>
       </li>
       <li>
-        <a href="/#">Acerca de Azafrán</a>
+        <Link to="">Encuadernacion</Link>
+      </li>
+      <li>
+        <Link to="">Acerca de Azafrán</Link>
       </li>
 
       <CartWidget/>
