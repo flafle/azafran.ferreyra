@@ -1,11 +1,8 @@
-.CartWidget {
+.cart  {
     width: 300px;
-    text-align: right;
+    text-align: end;
     font-size: 2rem;
     transition: transform 0.3 ease;
-   }
-  
- .CartWidget a i:hover {
-    transition: scale(1.1);
-    transform: rotate(0.1turn);
-   }
+    color: aqua;
+   
+}

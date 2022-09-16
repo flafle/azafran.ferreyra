@@ -1,61 +1,56 @@
+// import styles from "./styles.css"
 import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import ItemList from "../../components/ItemList";
+import { useParams } from "react-router-dom";
 
+const ItemListContainer = ({greeting}) => {
 
-const ItemListContainer = ({greeting}) => { 
-  
+  // guardamos en el useState
   const [productos, setProductos] = useState([]);
 
   const {categoryId} = useParams();
 
+  console.log(categoryId);
+
+
   useEffect(() => {
-
-( async ()=> {
-
-  // const obtenerProductos = new Promise ((resolve, reject)=> {
-  //   setTimeout(()=> {
-  //     resolve(products)
-  //   }, 3000);
-  // });
-
-  try {
-
-    if (categoryId) {
-      const response = await fetch(
-                    "https://fakestoreapi.com/products/category/" + categoryId
-                );
-      const productos = await response.json();
   
-      setProductos(productos);
+    (async () => {
+      try {
+        if (categoryId) {
+          const response = await fetch
+          ("https://fakestoreapi.com/products/category/" + categoryId
+          );
 
-    } else {
-      const response = await fetch("https://fakestoreapi.com/products");
-      const productos = await response.json();
+          const productos = await response.json();
+          setProductos(productos);
+        } else {
+          const response = await fetch(
+          "https://fakestoreapi.com/products"
+          );
 
-      setProductos(setProductos);
-    }
- 
+          const productos = await response.json();
+          setProductos(productos);
+        }
+  
+      } catch (error) {
+        console.log(error);
+      }
+    })();
 
-  } catch (error) {
-    console.log(error);
-  }
-
-})();
-
-}, [categoryId])
-
+  }, [categoryId]);
+  
   console.log(productos)
 
-    return (
-      <div className="item-list-container">
-        <h1>{greeting} </h1>
-        <ItemList productos = {productos}/>
-      </div>
-    )
-  };
+  //retornamos los productos en itemList
+  return (
+   <div className="galeria"> 
+     <h2>{greeting}</h2>
+      <ItemList products={productos}/>
+    </div>
+    
+  )
+};
 
- 
-
-export default ItemListContainer;
+export default ItemListContainer; 

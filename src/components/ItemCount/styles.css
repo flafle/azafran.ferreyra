@@ -1,0 +1,12 @@
+.contador {
+    width: fit-content;
+    text-align: center;
+    margin: auto ;
+    padding: 2rem;
+    background-color: black;
+
+}
+.buttons {
+    width: 2rem;
+
+}

@@ -1,49 +1,29 @@
-import React ,  { useState } from "react";
+import React from"react";
 import ItemCount from "../ItemCount";
-import { useNavigate } from "react-router-dom";
-import "./styles.css"
+import styles from "./styles.css";
 
-const itemDetail = ({products}) => {
+const ItemDetail = ({product}) => {
 
-    const [qty, setQty] = useState(0);
-    const navigate = useNavigate();
-    
+  const agregarCarrito = (cantidad) => {
+    console.log(cantidad);
+    alert(`Se agrego la cantidad ${cantidad} al carrito`);
+  };
 
-    const addCart = (quantity) => {
-            setQty(quantity);
-        }
-        console.log(qty);
-    };
-    const handleFinish = () => {
-        navigate("/cart");
-    };
-    console.log(qty);
-
-
-    return (
-  <div className="detail">
-      <div>
-        <img className="imgDetail" 
-        src={products.image} 
-        width={300} 
-        alt="imagen del producto" 
-        />
-        
-      <div>
-      <h2>{products.title}</h2>
-      <p>{products.detail}</p>
-      <p> {products.precio}$</p>
-
-            { ! qty ? ( 
-             <button onClick={handleFinish}>Finalizar compra</button>
-            ) : ( 
-                <ItemCount stock={10} initial={1} onAdd={addCart} />
-
-            )}
+  return (
+    <div className={styles.container}>
+      <div className={styles.imageContainer}>
+        <img src={product.image} width={400} alt="imagenProducto" />
+      </div>
+      <div className={styles.detailsContainer}>
+        <h3>{product.title}</h3>
+        <p>{product.description}.</p>
+        <p>Precio: {product.price}€</p>
+        <div className={styles.countContainer}>
+          <ItemCount initial={1} stock={5} onAdd={agregarCarrito}/>
         </div>
-     </div>
+      </div>
     </div>
-    );
+  );
+};
 
-
-export default itemDetail;
+export default ItemDetail;

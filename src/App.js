@@ -1,37 +1,25 @@
-import "./app.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import  "./app.css";
 import NavBar from "./components/NavBar";
+import NotFound from "./components/NotFound";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 import ItemListContainer from "./containers/ItemListContainer";
-import Cart from './containers/CartContainer';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import NotFound from "./components/NotFound";
 
+
+//categoria p/azafran: 
+// const categorias = ["Tapas", "Hojas", "Anillado"]
 function App() {
-  
-  // const categorias = ["Anillado","Hojas", "Tapas", "Cartucheras", "Encuadernacion"]
-  
   return (
-   <BrowserRouter>
-
-    <NavBar/>
-  
-   <Routes>
- 
-    <Route path="/" element={<ItemListContainer/>} />
-    <Route path= "/category/:categoryId" element={<ItemlistContainer/>} /> 
-    <Route path="/detail/:productId" element={<ItemDetailContainer/>} />
-    <Route path="/cart" element={<Cart/>}/>
-    <Route path="*" element= {<NotFound/>} />
-
-   </Routes>
-   </BrowserRouter>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<ItemListContainer/>}/>
+        <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
+        <Route path="/detail/:productId" element={<ItemDetailContainer/>}/>
+        <Route path="*" element={<NotFound/>}/>
+      </Routes>
+    </BrowserRouter>
   );
-};
-
-<itemCount/>
+}
 
 export default App;
