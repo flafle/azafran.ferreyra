@@ -1,12 +1,13 @@
+
 .contador {
     width: fit-content;
     text-align: center;
     margin: auto ;
     padding: 2rem;
     background-color: black;
-
 }
-.buttons {
+.itemcount.addCartButton {
     width: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }

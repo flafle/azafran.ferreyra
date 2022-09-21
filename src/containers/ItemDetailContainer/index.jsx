@@ -28,6 +28,6 @@ const ItemDetailContainer = () => {
   console.log(productDetail);
 
   return <ItemDetail product={productDetail}/>
-}
+};
 
 export default ItemDetailContainer;

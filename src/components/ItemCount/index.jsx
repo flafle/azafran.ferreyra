@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import styles from "./styles.css";
+import itemcount from "./itemcount.css";
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
@@ -29,12 +29,13 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
   return (
     <>
-      <div className={styles.addButtons}>
-        <button className={styles.buttons} onClick={sumProduct}>+</button>
+      <div className={itemcount.addButtons}>
+        <button className={itemcount.buttons} onClick={sumProduct}>+</button>
         <p>{add}</p>
-        <button className={styles.buttons} onClick={restProduct}>-</button>
+        <button className={itemcount.buttons} onClick={restProduct}>-</button>
       </div>
-      <button className={styles.addCartButton} onClick={addCart}>Agregar al carrito</button>
+      
+      <button className={itemcount.addCartButton} onClick={addCart}>Agregar al carrito</button>
     </>
   )
 };
