@@ -5,12 +5,14 @@ import NotFound from "./components/NotFound";
 import Cart from "./containers/cartContainer";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 import ItemListContainer from "./containers/ItemListContainer";
+import CartContext from "./context/CartContext";
 
 
 //categoria p/azafran: 
 // const categorias = ["Tapas", "Hojas", "Anillado"]
 function App() {
   return (
+    <CartContext>
     <BrowserRouter>
       <NavBar />
       <Routes>
@@ -21,7 +23,8 @@ function App() {
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>
+    </CartContext>
   );
-}
+};
 
 export default App;

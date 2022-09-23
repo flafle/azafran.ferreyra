@@ -18,6 +18,7 @@ const NavBar = () => {
     console.log(navColor);
 
     return (
+        <>
         <div className="navbar">
         <ul style={{
             backgroundColor: navColor
@@ -40,7 +41,8 @@ const NavBar = () => {
             <CartWidget/>
             <Select handleColor={onChangeColor}/>
         </ul>
-        </div>
+      </div>
+     </>
     );
 };
 
