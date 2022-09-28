@@ -1,16 +1,24 @@
 import React from "react";
-import {HiShoppingCart} from "react-icons/hi";
-import  "./cart.css";
-
+import { useContext } from "react";
+import {FaShoppingCart} from "react-icons/fa";
+import { Shop } from "../../context/CartContext";
+import "./styles.css";
 
 const CartWidget = () => {
 
-    return (
-        <div className="cart">
-           <HiShoppingCart color= "black" size={30}/>
-        </div>
-     
-    );
+  const {totalProducts} = useContext(Shop);
 
+  return (
+    <div className={styles.widgetContainer}>
+      <FaShoppingCart/>
+      {totalProducts() !== 0 
+      ? <div className={styles.productsInCart}>
+          {totalProducts()}
+        </div>
+      : ""}
+      
+    </div>
+  );
 };
+
 export default CartWidget;

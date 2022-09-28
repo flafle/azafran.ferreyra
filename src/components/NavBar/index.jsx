@@ -19,6 +19,8 @@ const NavBar = () => {
 
     return (
         <>
+        <header>
+        <Link to="/"><h3>LogodeAzafran</h3></Link>
         <div className="navbar">
         <ul style={{
             backgroundColor: navColor
@@ -42,6 +44,10 @@ const NavBar = () => {
             <Select handleColor={onChangeColor}/>
         </ul>
       </div>
+    <div className={styles.carritoContainer}>
+          <Link to="/cart"><CartWidget/></Link>
+   </div>
+  </header>
      </>
     );
 };

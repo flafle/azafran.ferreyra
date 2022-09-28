@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles.css";
-import { Shop } from "../../context/CartContext";
+import { Shop } from "../../context/ShopProvider";
 
 const ItemDetail = ({product}) => {
 
@@ -16,13 +16,13 @@ const ItemDetail = ({product}) => {
 
   const toCart = (quantity) => {
     setQty(quantity)
-  }
+  };
 
   const handleFinish = () => {
     const productToSave = {...product, quantity: qty};
     addItem(productToSave);
-    navigate ("/cart")
-  }
+    navigate ("/cart");
+  };
 
 
   return (
@@ -30,7 +30,7 @@ const ItemDetail = ({product}) => {
     <div className={styles.container}>
 
       <div className={styles.imageContainer}>
-        <img src={product.image} width={400} alt="imagenProducto" />
+        <img src={product.image} width={300} alt="imagenProducto" />
       </div>
 
       <div className={styles.detailsContainer}>

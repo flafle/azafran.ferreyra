@@ -13,7 +13,7 @@ import CartContext from "./context/CartContext";
 function App() {
   return (
     <CartContext>
-    <BrowserRouter>
+     <BrowserRouter>
       <NavBar />
       <Routes>
         <Route path="/" element={<ItemListContainer/>}/>
@@ -22,7 +22,7 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
-    </BrowserRouter>
+     </BrowserRouter>
     </CartContext>
   );
 };

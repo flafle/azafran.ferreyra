@@ -25,14 +25,15 @@ const Item = ({product}) => {
 
 
   return (
-    <div className={styles.cardContainer} onClick={handleNavigate}>
-      <img className={styles.cardImage} src={product.image} width="100%" alt="imagenProducto" />
-      <div className={styles.cardBody}>
-        <h6 className={styles.titleProduct}>{product.title}</h6>
-        <p className={styles.price}>{product.price}$</p>
-        <ItemCount initial={1} stock={product.stock} onAdd={agregarCarrito}/>
-      </div>
-  </div>
+    <div className={styles.cardContainer}>
+    <img className={styles.cardImage} src={product.image} onClick={handleNavigate} width="100%" alt="" />
+    <div className={styles.cardBody}>
+      <h6 className={styles.titleProduct}>{product.title}</h6>
+      <p className={styles.price}>{product.price}€</p>
+      <ItemCount initial={1} stock={product.stock} onAdd={agregarCarrito}/>
+    </div>
+</div>
+ 
 
   );
 };
