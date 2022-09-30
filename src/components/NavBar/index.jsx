@@ -1,9 +1,9 @@
 import React from "react";
+import { useState } from "react";
+import {Link} from "react-router-dom";
 import CartWidget from "../CartWidget";
 import Select from "../Select";
-import "./styles.css";
-import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import  "./styles.css" ;
 
 const NavBar = () => {
 
@@ -19,7 +19,7 @@ const NavBar = () => {
 
     return (
         <>
-        <header>
+        <header >
         <Link to="/"><h3>LogodeAzafran</h3></Link>
         <div className="navbar">
         <ul style={{
@@ -44,7 +44,7 @@ const NavBar = () => {
             <Select handleColor={onChangeColor}/>
         </ul>
       </div>
-    <div className={styles.carritoContainer}>
+    <div >
           <Link to="/cart"><CartWidget/></Link>
    </div>
   </header>

@@ -1,8 +1,8 @@
 
 import React from "react";
 import { useContext } from "react";
-import { Shop } from "../../context/ShopProvider";
-import "./styles.css";
+import { Shop } from "../../context/CartContext";
+import styles from "./styles.css";
 
 const CartTotals = () => {
 

@@ -1,9 +1,9 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import ItemDetail from "../../components/ItemDetail";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import ItemDetail from '../../components/ItemDetail';
+import { useParams } from 'react-router-dom';
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../firebase/config";
+import { db } from '../../firebase/config';
 
 const ItemDetailContainer = () => {
   
@@ -17,7 +17,6 @@ const ItemDetailContainer = () => {
       try {
 
         const docRef = doc(db, "products", productId);
-        //para llamar firebase
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
@@ -37,6 +36,6 @@ const ItemDetailContainer = () => {
   }, [productId]);
 
   return <ItemDetail product={productDetail}/>
-};
+}
 
 export default ItemDetailContainer;

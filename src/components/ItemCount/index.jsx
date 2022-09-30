@@ -1,8 +1,6 @@
-import React from "react";
-import { useState } from "react";
-import itemcount from "./itemcount.css";
-import "./itemcount.css";
-
+import React from 'react';
+import { useState } from 'react';
+import styles from './styles.css';
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
@@ -12,34 +10,33 @@ const ItemCount = ({stock, initial, onAdd}) => {
     if(add < stock) {
       setAdd(add + 1);
     } else {
-      alert("No tenemos stock de ese producto");
+      alert("No tenemos stock suficiente");
     }
-  };
+  }
 
   const restProduct = () => {
     if(add > 1) {
       setAdd(add - 1);
     } else {
-      alert("Debes seleccionar al menor 1 producto")
+      alert("no puedes seleccionar menos de 1")
     }
-  };
+  }
 
   const addCart = () => {
     onAdd(add);
-    setAdd(initial)
-  };
+    setAdd(initial);
+  }
 
   return (
     <>
-      <div className={itemcount.addButtons}>
-        <button className={itemcount.buttons} onClick={sumProduct}>+</button>
+      <div className={styles.addButtons}>
+        <button className={styles.buttons} onClick={sumProduct}>+</button>
         <p>{add}</p>
-        <button className={itemcount.buttons} onClick={restProduct}>-</button>
+        <button className={styles.buttons} onClick={restProduct}>-</button>
       </div>
-      
-      <button className={itemcount.addCartButton} onClick={addCart}>Agregar al carrito</button>
+      <button className={styles.addCartButton} onClick={addCart}>Agregar al carrito</button>
     </>
   )
-};
+}
 
 export default ItemCount;

@@ -1,8 +1,8 @@
-import React from "react";
-import { useContext } from "react";
-import {FaShoppingCart} from "react-icons/fa";
-import { Shop } from "../../context/CartContext";
-import "./styles.css";
+import React from 'react';
+import { useContext } from 'react';
+import {FaShoppingCart} from 'react-icons/fa'
+import { Shop } from '../../context/CartContext';
+import styles from './cart.css';
 
 const CartWidget = () => {
 
@@ -18,7 +18,7 @@ const CartWidget = () => {
       : ""}
       
     </div>
-  );
-};
+  )
+}
 
 export default CartWidget;

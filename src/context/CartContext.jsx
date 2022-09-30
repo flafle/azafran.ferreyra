@@ -45,11 +45,11 @@ const clearCart = () => {
     setCart([]);
 };
 
-//Sumo la cantidad:
+//cantidad:
 const totalPrice = () => {
     return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
 };
-//Sumo y obtengo el total:
+// total:
 const totalProducts = () => {
     return cart.reduce ((prev, act) => prev + act.quantity, 0);
 };

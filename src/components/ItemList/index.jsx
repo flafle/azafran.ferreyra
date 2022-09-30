@@ -1,8 +1,8 @@
-import React from "react";
-import Item from "../Item";
-import Box from "@mui/material/Box";
-import LinearProgress from "@mui/material/LinearProgress";
-import styles from "./styles.css";
+import React from 'react';
+import Item from '../Item';
+import styles from './styles.css';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 
 const ItemList = ({products}) => {
@@ -12,7 +12,7 @@ const ItemList = ({products}) => {
       ? products.map(product => {
         return <Item key={product.id} product={product}/>
       })
-      : <Box sx={{ width: "100%" }}>
+      : <Box sx={{ width: '100%' }}>
           <LinearProgress />
         </Box>}
     </div>

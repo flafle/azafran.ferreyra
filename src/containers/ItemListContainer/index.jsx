@@ -1,26 +1,23 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import ItemList from "../../components/ItemList";
-import { useParams } from "react-router-dom";
-import { db } from "../../firebase/config";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import ItemList from '../../components/ItemList';
+import { useParams } from 'react-router-dom';
+import { db } from '../../firebase/config';
 import { collection, query, where, getDocs } from "firebase/firestore";
-
-
-
 
 const ItemListContainer = () => {
 
-  
+  //llamamos los productos una vez cuando se renderiza la pagina y la guardamos en el useState
   const [productos, setProductos] = useState([]);
 
   const {categoryId} = useParams();
 
-  
+  //usamos el useEffect para que se renderice una sola vez cuando se carge la pagina
   useEffect(() => {
   
     (async () => {
     
-
+      //obtenemos productos Firestore
       try {
 
         const q = categoryId ? query(collection(db, "products"), where("category", "==", categoryId)) : query(collection(db, "products"));
@@ -42,7 +39,7 @@ const ItemListContainer = () => {
 
   }, [categoryId]);
 
- 
+  //retornamos los productos en itemList
   return (
     <div>
       <ItemList products={productos}/>

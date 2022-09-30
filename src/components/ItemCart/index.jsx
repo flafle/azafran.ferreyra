@@ -1,7 +1,7 @@
-import React from "react"
-import { useContext } from "react";
-import { Shop } from "../../context/CartContext";
-
+import React from 'react'
+import { useContext } from 'react';
+import { Shop } from '../../context/CartContext';
+import styles from './styles.css';
 
 const ItemCart = ({product}) => {
 
