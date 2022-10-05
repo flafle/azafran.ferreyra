@@ -1,19 +1,18 @@
-import React from 'react';
-import CartItems from '../../components/CartItems';
-import CartTotals from '../../components/CartTotals';
-import styles from './styles.css';
+import React from "react";
+import CartItems from "../../components/CartItems";
+import CartTotals from "../../components/CartTotals";
+
 
 const CartContainer = () => {
-
   return (
     <>
-    <div className={styles.cartContainer}>
+    <div >
       <CartItems/>
       <CartTotals/>
     </div>
     </>
 
-  )
-}
+  );
+};
 
 export default CartContainer;

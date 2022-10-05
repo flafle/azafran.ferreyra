@@ -34,6 +34,8 @@ const addItem = (item) => {
 const isInCart = (id) => {
     return cart.some(product => product.id === id)
 };
+
+
 //Para eliminar del carrito
 const removeItem = (id) => {
     const removeCart = cart.filter(product => product.id !== id);

@@ -4,7 +4,7 @@ import { db } from "../firebase/config";
 const automaticSaveAlgorithm = async () => {
 
   try {
-      //Primero obtenemos los productos que queremos guardar
+      //Lo que se quiere guardar.
       const response = await fetch('/mocks/data.json');
       const productosAGuardar = await response.json();
   
@@ -22,7 +22,7 @@ const automaticSaveAlgorithm = async () => {
       
   } catch (error) {
       console.log(error)
-  }
-}
+  };
+};
 
 export default automaticSaveAlgorithm;

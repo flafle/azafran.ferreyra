@@ -1,20 +1,19 @@
-import React from 'react';
-import { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { Shop } from '../../context/CartContext';
-import styles from './styles.css';
+import React from "react";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { Shop } from "../../context/CartContext";
+
 
 const ButtonsCartItems = () => {
 
   const {clearCart} = useContext(Shop); 
 
   return (
-    <div className={styles.buttonContainer}>
+    <div>
       <button onClick={() => clearCart()}>Vaciar carrito</button>
       <Link to="/"><button>Seguir comprando</button></Link>
-      
-    </div>
-  )
-}
+   </div>
+  );
+};
 
-export default ButtonsCartItems
+export default ButtonsCartItems;

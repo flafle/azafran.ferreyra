@@ -1,10 +1,10 @@
-import styles from './styles.css';
-import React from 'react';
-import { useContext } from 'react';
-import { Shop } from '../../context/CartContext';
-import { Link } from 'react-router-dom';
-import ItemCart from '../ItemCart';
-import ButtonsCartItems from '../ButtonsCartItems';
+
+import React from "react";
+import { useContext } from "react";
+import { Shop } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+import ItemCart from "../ItemCart";
+import ButtonsCartItems from "../ButtonsCartItems";
 
 const CartItems = () => {
 
@@ -17,10 +17,10 @@ const CartItems = () => {
   });
 
   return (
-    <section className={styles.cartContent}>
+    <section >
         {
           !cart.length 
-          ? <div className={styles.emptyContainer}>
+          ? <div >
               <p>No hay productos en el carrito</p>
               <Link to="/"><button>Volver al catalogo</button></Link>
             </div>
@@ -35,7 +35,7 @@ const CartItems = () => {
           : <ButtonsCartItems/>
         }
       </section>
-  )
-}
+  );
+};
 
 export default CartItems;

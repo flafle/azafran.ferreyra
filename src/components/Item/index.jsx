@@ -9,16 +9,14 @@ const Item = ({product}) => {
     alert(`Se agrego la cantidad ${cantidad} al carrito`);
   };
 
-  //creamos una variable para usar el hook useNavigate
+ 
   const navigate = useNavigate();
 
-  //navegamos creando una variable usando un hook
-  //hacia el detalle del producto seleccionado
+ 
   const handleNavigate = () => {
     navigate(`/detail/${product.id}`)
   }
 
-  //por cada producto aqui devolvemos un Item
   return (
     <div className={styles.cardContainer}>
       <img className={styles.cardImage} src={product.image} onClick={handleNavigate} width="100%" alt="" />
