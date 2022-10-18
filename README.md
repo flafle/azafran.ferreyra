@@ -4,7 +4,9 @@ Hola 👋, Soy Flavia y este es un proyecto para Coderhouse.(Se llama "Azafrán"
 
 ⚡He usado React para crear una app sobre la api "FakestoreApi".
 Realice los estilos con Css puro y algunos casos Sass.
-Se selecciona un producto, y pueden acumularse en el carrito de compras. Una vez decidida la compra se pide los datos del comprador/a y se genera una orden de compra que se almacena en la base de datos, al usuario se le da la id de esta orden para un futuro sistema de seguimiento de la orden.
+
+⚡Es un ecommerce que emula produsctos de varias categorias.
+⚡Se selecciona un producto o varios,ya que pueden acumularse en el carrito de compras, y una vez decidida la compra se pide los datos del comprador/a y se genera una orden de compra que se almacena en la base de datos. (se avisa al user que fue un éxito la compra.)
 He usado Firebase, React-icons, y sweet alert.
 
 ⚡A continuacion dejo el GiF de la página, que realice con "GYPHY" :
