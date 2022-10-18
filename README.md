@@ -9,3 +9,5 @@ He usado Firebase, React-icons, y sweet alert.
 
 A continuacion dejo el GiF de la página, que realice con "GYPHY" :
 
+https://media.giphy.com/media/d5xDevOpkPAbX980xb/giphy.gif
+
