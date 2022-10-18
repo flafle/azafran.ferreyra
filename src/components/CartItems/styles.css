@@ -1,0 +1,36 @@
+.cartContent { 
+    grid-area:auto;
+    width: 100%;
+    background-color: white;
+    font-size: medium;
+    border-radius: 1rem;
+  }
+  p {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    min-width: 3rem;
+    height: 40px;
+  }
+      button {
+        margin-top: 1rem;
+        margin-left: 2rem;
+        min-width: 3rem;
+        height: 40px;
+        color: #fff;
+        padding: 1rem, 3rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px;
+        border: 1,5rem solid #2c0b8e;
+        background: #2c0b8e;
+      }
+      button:hover {
+        background: #fff;
+        color: #2c0b8e
+      }
+    
+  
+  

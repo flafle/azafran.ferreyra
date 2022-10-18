@@ -8,7 +8,7 @@ import  "./styles.css" ;
 const NavBar = () => {
 
     //Nombre del estado, setNombreDelEstado
-    const [navColor, setNavColor] = useState("#f3f3f3")
+    const [navColor, setNavColor] = useState("black")
 
     const onChangeColor = (event) => {
         const color = event.target.value;
@@ -29,24 +29,25 @@ const NavBar = () => {
                 <Link to="/">Home</Link>
             </li>
             <li>
-                <Link to="/category/men's clothing">Men's clothing</Link>
+                <Link to="/category/men's clothing"> Men's clothing </Link>
             </li>
             <li>
-                <Link to="/category/women's clothing">Women's clothing</Link>
+                <Link to="/category/women's clothing"> Women's clothing </Link>
             </li>
             <li>
-                <Link to="/category/electronics">Electronics</Link>
+                <Link to="/category/electronics"> Electronics </Link>
             </li>
             <li>
-                <Link to="/category/jewelery">Jewelery</Link>
+                <Link to="/category/jewelery"> Jewelery </Link>
             </li>
-            <CartWidget/>
+
+         <div className="cart" >
+          <Link to="/cart"><CartWidget/></Link>
+        </div>
             <Select handleColor={onChangeColor}/>
         </ul>
       </div>
-    <div >
-          <Link to="/cart"><CartWidget/></Link>
-   </div>
+  
   </header>
      </>
     );

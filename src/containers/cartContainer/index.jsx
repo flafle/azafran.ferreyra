@@ -6,7 +6,7 @@ import CartTotals from "../../components/CartTotals";
 const CartContainer = () => {
   return (
     <>
-    <div >
+    <div className="prductos__carrito" >
       <CartItems/>
       <CartTotals/>
     </div>

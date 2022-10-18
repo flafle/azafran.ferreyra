@@ -29,12 +29,14 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
   return (
     <>
+    <div className="styles">
       <div className={styles.addButtons}>
         <button className={styles.buttons} onClick={sumProduct}>+</button>
         <p>{add}</p>
         <button className={styles.buttons} onClick={restProduct}>-</button>
       </div>
       <button className={styles.addCartButton} onClick={addCart}>Agregar al carrito</button>
+    </div>
     </>
   )
 }

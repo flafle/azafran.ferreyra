@@ -5,6 +5,7 @@ import { Shop } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import ItemCart from "../ItemCart";
 import ButtonsCartItems from "../ButtonsCartItems";
+import "./styles.css";
 
 const CartItems = () => {
 
@@ -17,7 +18,7 @@ const CartItems = () => {
   });
 
   return (
-    <section >
+    <section className="contenerdor">
         {
           !cart.length 
           ? <div >

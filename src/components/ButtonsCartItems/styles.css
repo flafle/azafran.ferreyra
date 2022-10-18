@@ -1,0 +1,9 @@
+button {
+    color: blueviolet;
+    font-size: small;
+   
+}
+.styles {
+    display: flex;
+    align-items: flex-end;
+}

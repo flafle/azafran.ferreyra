@@ -3,8 +3,10 @@ import Routing from "./routes";
 function App() {
 
   return (
-    <Routing/>
+   
+     <Routing/>
+    
   );
-}
+};
 
 export default App;

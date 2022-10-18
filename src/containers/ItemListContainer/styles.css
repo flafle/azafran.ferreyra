@@ -1,0 +1,7 @@
+.productos__carrito {
+    color: blueviolet;
+    font-size: larger;
+    margin: 1re, 1rem;
+    display: flex;
+    align-self: center;
+  }

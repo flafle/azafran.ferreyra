@@ -1,0 +1,42 @@
+
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color:goldenrod;
+    width: auto;
+}
+#root { 
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr, 3fr;
+    border-radius: 10px;
+    min-height: 200px;
+    padding: 20px;
+   
+ }
+
+img {
+    width: 15rem;
+    height: auto;
+    grid-template-columns: 1fr, 3fr;
+    min-height: 200px;
+    font-weight: bold;
+    padding: 20px;
+    overflow: hidden;
+    
+}
+p{
+    font-size: 1rem;
+}
+ul,li, a {
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}

@@ -8,7 +8,7 @@ const ItemCart = ({product}) => {
   const {removeItem} = useContext(Shop);
 
   return (
-    <div className={styles.cartContent}>
+    <div className="card" >
       <img className={styles.productImage} width="130px" height="130px" src={product.image} alt=""/>
       <dl className={styles.title}>
         <dt>Nombre</dt>

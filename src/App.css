@@ -1,52 +1,6 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.App {
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    
-}
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-div.navbar {
-    width: fit-content;
-}
-ul,li, a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-img {
-  
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 1em;
-    width: 30rem;
-    height: auto;
-}
-button {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: fuchsia;
-    font-size: 20px;
-}
-p {
-    font-style: oblique;
-    color:fuchsia;
-    font-size: 30px;
-}
-.cart{
-   border: none;
-   margin-top: 24;
-   margin-bottom: 24;
-   background-color: blueviolet;
-}
-
-
-

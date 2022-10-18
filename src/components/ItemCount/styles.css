@@ -1,0 +1,13 @@
+.styles{
+
+}
+.styles:hover {
+    width: fit-content;
+    background-color:#ad7600;
+      transition: 0.7s;
+}
+button {
+  width: fit-content;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px #5a01a7;
+}
